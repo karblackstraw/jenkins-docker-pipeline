@@ -21,7 +21,7 @@ pipeline {
         
         stage('Cloning Git') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/jenkins-folder']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github-Access', url: 'https://github.com/karblackstraw/sonarqubejenkins102.git']]])     
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github-Access', url: 'https://github.com/karblackstraw/jenkins-docker-pipeline.git']]])     
             }
         }
   
